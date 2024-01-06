@@ -1,3 +1,2 @@
-import { selectors } from "./weather.js";
-
-console.log(selectors.city)
+import { getWeather } from "./weather.js";
+document.addEventListener("DOMContentLoaded", async () => getWeather());

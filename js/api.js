@@ -1,12 +1,13 @@
-const API_KEY = "a4f29481afdc9c07521c3bbf7c8337f3";
+const API_KEY = "d3d6e45d10f9966f19a220b637c4e1e0";
 
 async function fetchWeatherData(city, units) {
   try {
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=${units}`
+
     );
-    // console.log(response.json());
-    // eger istek basarılı değilse hata fırlat
+     //console.log(response.json());
+    // eger istek basarılı degilse hata fırlat
     if (!response.ok) {
       throw new Error("İstek basarılı degil");
     }
